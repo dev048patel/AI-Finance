@@ -1,13 +1,16 @@
 import HeroSection from "@/components/hero";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { featuresData, howItWorksData, statsData, testimonialsData } from "@/data/landing";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className = "mt-40">
       <HeroSection />
       
+      {/* Taking statsData from landing.js  */}
       <section className = "py-20 bg-blue-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -25,7 +28,7 @@ export default function Home() {
       </section>
       
       
-
+            {/* Taking featuresData from landing.js  */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
@@ -50,6 +53,8 @@ export default function Home() {
 
       </section>
       
+            {/* Taking howItWorksData from landing.js */}
+
       <section className="py-20 bg-blue-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-16">
@@ -69,6 +74,7 @@ export default function Home() {
 
       </section>
       
+      {/* testimonaialsData from landing.js */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
@@ -106,9 +112,31 @@ export default function Home() {
       </section>
 
 
-      <section className="py-20">
+     
+      
+            {/* Bouncing CSS - Last  */}
+
+            <section className="py-20 bg-blue-600">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Take Control of Your Finances?
+          </h2>
+         <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+          Join thousands of satisfied users who manage their money with FinTrack.
+         </p>
+         <Link href="/dashboard">
+           <Button 
+           size="lg"
+           className="bg-white text-blue-600 hover:bg-blue-50 animate-bounce"
+           >
+            Start Free Trail
+           </Button>
+         </Link>
+        </div>
 
       </section>
+
+
     </div>
   );
 }
