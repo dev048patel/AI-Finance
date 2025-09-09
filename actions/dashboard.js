@@ -1,4 +1,4 @@
-// Create Accont -> Backend Loic
+// Create Accont -> Backend Logic
 
 // This file contains the server side action functions for the dashboard page
 
